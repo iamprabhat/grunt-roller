@@ -36,3 +36,5 @@ var path        = require('path');
 // To load required NPM modules.
 ///-----------------------------
 var rollup      = require('rollup');
+///Calling Promise method of Bluebird — is a fully featured promise library.
+var Promise     = require('bluebird').Promise;
