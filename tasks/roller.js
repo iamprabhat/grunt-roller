@@ -38,3 +38,4 @@ var path        = require('path');
 var rollup      = require('rollup');
 ///Calling Promise method of Bluebird — is a fully featured promise library.
 var Promise     = require('bluebird').Promise;
+var chalk       = require('chalk');
