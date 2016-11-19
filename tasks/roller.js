@@ -52,3 +52,28 @@ var yeep        = chalk.green;
 module.exports  = function(grunt) {
   
   grunt.registerMultiTask('roller', 'A smart grunt plugin for rollup — a next-generation ES6 module bundler.', function() {
+    
+    // Private scope variables.
+    ///------------------------
+    var done    = this.async();
+    
+    // options for ES6.
+    ///----------------
+    var options = this.options({
+      banner    : null,
+      external  : [],
+      exports   : 'auto',
+      format    : 'es',
+      footer    : null,
+      globals   : {},
+      intro     : null,
+      indent    : true,
+      moduleId  : null,
+      moduleName: null,
+      useStrict : true,
+      outro     : null,
+      plugins   :[],
+      sourceMap : false,
+      sourceMapFile: null,
+      sourceMapRelativePaths: false
+    });
