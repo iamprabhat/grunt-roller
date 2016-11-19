@@ -39,3 +39,8 @@ var rollup      = require('rollup');
 ///Calling Promise method of Bluebird — is a fully featured promise library.
 var Promise     = require('bluebird').Promise;
 var chalk       = require('chalk');
+
+// Default color defined.
+///----------------------
+var noop        = chalk.red;
+var yeep        = chalk.green;
