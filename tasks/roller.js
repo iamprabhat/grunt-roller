@@ -32,3 +32,7 @@
 // To load required Node module.
 ///-----------------------------
 var path        = require('path');
+
+// To load required NPM modules.
+///-----------------------------
+var rollup      = require('rollup');
