@@ -29,3 +29,4 @@
  */
 
 // "disallowMultipleSpaces": {"allowEOLComments": true}
+// "disallowSemicolons": false
