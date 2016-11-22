@@ -134,3 +134,10 @@ module.exports  = function(grunt) {
         grunt.file.write(f.dest, code);
       });
     });
+    // calling all `Promise(s)`.
+    Promise.all(promises).then(function() {
+      done();
+    }).catch(function(error) {
+      grunt.fail.warn(noop(error));
+    });
+  });
