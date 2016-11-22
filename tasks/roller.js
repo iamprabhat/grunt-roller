@@ -141,3 +141,4 @@ module.exports  = function(grunt) {
       grunt.fail.warn(noop(error));
     });
   });
+};
