@@ -63,3 +63,8 @@ module.exports = function(grunt) {
   
   // Force use of Unix newlines.
   grunt.util.linefeed = '\n';
+  
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project configuration for -//grunt-roller//- |---------------------------| 22/Nov/2016 | SEED™ — Umeå.
+  //                  		 Copyright © 2016, Prabhat Kumar, All rights reserved.
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
