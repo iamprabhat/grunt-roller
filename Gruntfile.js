@@ -60,3 +60,6 @@ var okay = chalk.blue;
 // ----------------------------------------------------------------------------------------------------------
 
 module.exports = function(grunt) {
+  
+  // Force use of Unix newlines.
+  grunt.util.linefeed = '\n';
