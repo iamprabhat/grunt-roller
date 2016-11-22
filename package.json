@@ -1,0 +1,42 @@
+{
+  "name": "grunt-roller",
+  "version": "0.0.1",
+  "description": "A smart grunt plugin for rollup — a next-generation ES6 module bundler.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamprabhat/grunt-roller.git"
+  },
+  "keywords": [
+    "grunt",
+    "plugin",
+    "rollup",
+    "ES6",
+    "module",
+    "roller"
+  ],
+  "author": "Prabhat Kumar <prabhat.genome@gmail.com> (http://prabhatkumar.org/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamprabhat/grunt-roller/issues"
+  },
+  "homepage": "https://github.com/iamprabhat/grunt-roller#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "chalk": "^1.1.3",
+    "rollup": "^0.x"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-jscs": "^3.0.1"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  }
+}
