@@ -77,3 +77,60 @@ module.exports  = function(grunt) {
       sourceMapFile: null,
       sourceMapRelativePaths: false
     });
+    
+    var promises = this.files.map(function(f) {
+      if (f.src.length === 0) {
+        grunt.fail.warn(noop('There is no entry point specified.'));
+      }
+      var entry;
+      if (f.src.length > 1) {
+        entry = f.src;
+        grunt.log.writeln(noop('Multiple entry points detected. Be sure to include [rollup-plugin-multi-entry] in plugins.'));
+      } else {
+        entry = f.src[0];
+        if (!grunt.file.exists(entry)) {
+          grunt.fail.warn(yeep('Entry point "' + entry + '" not found!'));
+        }
+      }
+      var plugins = options.plugins;
+      if (typeof plugins === 'function') {
+        plugins = plugins();
+      }
+      // Rollup, Next-generation ES6 module bundler — http://rollupjs.org/.
+      return rollup.rollup({
+        entry         : entry,
+        external      : options.external,
+        plugins       : plugins,
+        context       : options.context,
+        moduleContext : options.moduleContext
+      }).then(function(bundle) {
+        var sourceMapFile = options.sourceMapFile;
+        if (!sourceMapFile && options.sourceMapRelativePaths) {
+          sourceMapFile = path.resolve(f.dest);
+        }
+        var result = bundle.generate({
+          banner      : options.banner,
+          exports     : options.exports,
+          format      : options.format,
+          footer      : options.footer,
+          globals     : options.globals,
+          intro       : options.intro,
+          indent      : options.indent,
+          moduleId    : options.moduleId,
+          moduleName  : options.moduleName,
+          useStrict   : options.useStrict,
+          outro       : options.outro,
+          sourceMap   : options.sourceMap,
+          sourceMapFile: sourceMapFile
+        });
+        var code = result.code;
+        if (options.sourceMap === true) {
+          var sourceMapOutPath = f.dest + '.map';
+          grunt.file.write(sourceMapOutPath, result.map.toString());
+          code += "\n//# sourceMappingURL=" + path.basename(sourceMapOutPath);
+        } else if (options.sourceMap === "inline") {
+          code += "\n//# sourceMappingURL=" + result.map.toUrl();
+        }
+        grunt.file.write(f.dest, code);
+      });
+    });
