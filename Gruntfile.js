@@ -30,3 +30,4 @@
 
 // "disallowMultipleSpaces": {"allowEOLComments": true}
 // "disallowSemicolons": false
+// "requireSemicolons": true
