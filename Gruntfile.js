@@ -48,3 +48,9 @@
 // -----------------------------
 var chalk = require('chalk');
 var plugin = require('./test/plugin');
+
+// Default color defined.
+// ----------------------
+var noop = chalk.red;
+var yeep = chalk.green;
+var okay = chalk.blue;
