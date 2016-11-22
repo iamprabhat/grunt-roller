@@ -27,3 +27,5 @@
  * --/The Heart of Build System/-- of "grunt-roller®".
  * ___________________________________________________________________________
  */
+
+// "disallowMultipleSpaces": {"allowEOLComments": true}
