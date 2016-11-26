@@ -68,3 +68,7 @@ module.exports = function(grunt) {
   // Project configuration for -//grunt-roller//- |---------------------------| 22/Nov/2016 | SEED™ — Umeå.
   //                  		 Copyright © 2016, Prabhat Kumar, All rights reserved.
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // 1. time-grunt ——> $ npm install time-grunt --save-dev
+  // -----------------------------------------------------
+  // Display the elapsed execution time of grunt tasks.
+  require('time-grunt')(grunt);
