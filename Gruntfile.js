@@ -116,3 +116,11 @@ module.exports = function(grunt) {
         '!node_modules/**/*.js' // ignores node_modules.
       ]
     },
+    jscs: {
+      src: './Gruntfile.js',
+      options: {
+        config: '.jscsrc',
+        fix: true, // Autofix code style violations when possible.
+        requireCurlyBraces: ['if']
+      }
+    },
