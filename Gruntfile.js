@@ -94,3 +94,25 @@ module.exports = function(grunt) {
         duration: 4 // the duration of notification in seconds, for `notify-send only.
       }
     },
+    jshint: {
+      options: {
+        curly: true,
+        eqeqeq: true,
+        eqnull: true,
+        node: true,
+        strict: true,
+        sub: true,
+        undef: true
+      },
+      ignore_warning: {
+        options: {
+          '-W015': true // [L24:C9] W015: Expected '}' to have an indentation at 11 instead at 9.
+        }
+      },
+      all: [
+        './Gruntfile.js',
+        './tasks/*.js',
+        '<%= nodeunit.tests %>',
+        '!node_modules/**/*.js' // ignores node_modules.
+      ]
+    },
