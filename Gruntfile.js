@@ -124,3 +124,7 @@ module.exports = function(grunt) {
         requireCurlyBraces: ['if']
       }
     },
+    clean: {
+      // Before generating any new files, remove any previously-created files.
+      tests: ['tmp', '*.tmp', '*.log']
+    },
