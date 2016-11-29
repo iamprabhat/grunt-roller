@@ -35,9 +35,10 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-nodeunit": "^1.0.0",
-    "grunt-jscs": "^3.0.1"
+    "grunt-jscs": "^3.0.1",
+    "grunt-notify": "^0.4.5",
   },
   "engines": {
     "node": ">= 0.8.0"
   }
-}v
+}
