@@ -7,3 +7,5 @@
  * Copyright © 2014 - 2016, Sequømics Corporation, All rights reserved.
  * Released under the MIT license (https://opensource.org/licenses/MIT).
  */
+
+"use strict";
